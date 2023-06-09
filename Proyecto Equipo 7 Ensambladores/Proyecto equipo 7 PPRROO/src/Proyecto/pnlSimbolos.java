@@ -487,7 +487,7 @@ DefaultTableModel mc;
                     }/*if code*/else{
                         if(auxCs==1){
                             if(text.contains("DAA")|| text.contains("daa")){
-                                int flgCLI=code.validaCLI(text);
+                                int flgCLI=code.validaDAA(text);
                                 if(flgCLI==1){
                                     String ins=text;
                                     String estado="Correcto";
@@ -513,7 +513,7 @@ DefaultTableModel mc;
                             }else{
                         if(auxCs==1){
                             if(text.contains("DAS")|| text.contains("das")){
-                                int flgCLC=code.validaCLC(text);
+                                int flgCLC=code.validaDAS(text);
                                 if(flgCLC==1){
                                     String ins=text;
                                     String estado="Correcto";
@@ -544,7 +544,7 @@ DefaultTableModel mc;
                             
                             /*if pushf*/else{
                                 if(text.contains("PUSHF")|| text.contains("pushf")){
-                                    int flgAAM=code.validaAAM(text);
+                                    int flgAAM=code.validaPUSHF(text);
                                     if(flgAAM==1){
                                         String ins=text;
                                         String estado="Correcto";
@@ -594,7 +594,7 @@ DefaultTableModel mc;
                                         }
                                     }/*if cmpsw*/else{
                                         if(text.contains("CLC")|| text.contains("clc")){
-                                            int flgSTOSW=code.validaSTOSW(text);
+                                            int flgSTOSW=code.validaCLC(text);
                                             if(flgSTOSW==1){
                                                 String ins=text;
                                                 String estado="Correcto";
@@ -619,7 +619,7 @@ DefaultTableModel mc;
                                             }
                                         }/*if nop*/else{  
                                         if(text.contains("CLD")||text.contains("cld")){
-                                           int flgDAS=code.validaSTI(text);
+                                           int flgDAS=code.validaCLD(text);
                                             if(flgDAS==1){
                                                 String ins=text;
                                                 String estado="Correcto";
@@ -645,7 +645,7 @@ DefaultTableModel mc;
                                             }//if flg 2    
                                            }/*if imul*/ else{
                                                 if(text.contains("DEC")|| text.contains("dec")){
-                                            int flgLODSW=code.validaLODSW(text);
+                                            int flgLODSW=code.validaDEC(text);
                                             if(flgLODSW==1){
                                                 String ins=text;
                                                 String estado="Correcto";
@@ -670,7 +670,7 @@ DefaultTableModel mc;
                                             }
                                         }/*if nop*/else{
                                                 if(text.contains("IDIV")||text.contains("idiv")){
-                                                                int flgNEG=code.validaNEG(text);
+                                                                int flgNEG=code.validaIDIV(text);
                                                                 if(flgNEG==1){
                                                                     String ins=text;
                                                                     String estado="Correcto";
@@ -698,7 +698,7 @@ DefaultTableModel mc;
 
                                                            }/*if NEG*/ else{
                                                    if(text.contains("IMUL")||text.contains("imul")){
-                                                   int flgNOT=code.validaNOT(text);
+                                                   int flgNOT=code.validaIMUL(text);
                                                    if(flgNOT==1){
                                                        String ins=text;
                                                        String estado="Correcto";
@@ -725,7 +725,7 @@ DefaultTableModel mc;
                                                    }
                                                    }/*if NOT*/ else{
                                                    if(text.contains("POP")||text.contains("pop")){
-                                                   int flgAND=code.validaAND(text);
+                                                   int flgAND=code.validaPOP(text);
                                                    if(flgAND==1){
                                                        String ins=text;
                                                        String estado="Correcto";
@@ -789,7 +789,7 @@ DefaultTableModel mc;
                                                    }//if flg 6
                                                }/*if shl*/ else{   
                                                    if(text.contains("CMP ")||text.contains("cmp ")){
-                                                   int flgTEST=code.validaINTO(text);
+                                                   int flgTEST=code.validaCMP(text);
                                                    if(flgTEST==1){
                                                        String ins=text;
                                                        String estado="Correcto";
@@ -853,7 +853,7 @@ DefaultTableModel mc;
                                                    }//if flg 6
                                                }/*if shl*/ else{
                                                    if(text.contains("LES")||text.contains("les")){
-                                                   int flgROR=code.validaROR(text);
+                                                   int flgROR=code.validaLES(text);
                                                    if(flgROR==1){
                                                        String ins=text;
                                                        String estado="Correcto";
@@ -983,7 +983,7 @@ DefaultTableModel mc;
                                                            }//if flg 2
                                                        }/*if saltos*/else{
                                                            if(text.contains("RCL")||text.contains("rcl")){
-                                                               int flgDIV=code.validaDIV(text);
+                                                               int flgDIV=code.validaRCL(text);
                                                                 if(flgDIV==1){
                                                                     String ins=text;
                                                                     String estado="Correcto";
@@ -1011,7 +1011,7 @@ DefaultTableModel mc;
 
                                                                 }
                                                            if(text.contains("XCHG")||text.contains("xchg")){
-                                                               int flgDEC=code.validaDEC(text);
+                                                               int flgDEC=code.validaXCHG(text);
                                                                 if(flgDEC==1){
                                                                     String ins=text;
                                                                     String estado="Correcto";
@@ -1040,7 +1040,7 @@ DefaultTableModel mc;
                                                                 }
                                                            else{
                                                            if(text.contains("JB")||text.contains("jb")){
-                                                               int flgIDIV=code.validaIDIV(text);
+                                                               int flgIDIV=code.validaJB(text);
                                                                 if(flgIDIV==1){
                                                                     String ins=text;
                                                                     String estado="Correcto";
@@ -1077,7 +1077,7 @@ DefaultTableModel mc;
                                                            /*if idiv*/ else{
                                                                
                                                                 if(text.contains("JE")||text.contains("je")){
-                                                                int flgDEC=code.validaMUL(text);
+                                                                int flgDEC=code.validaJE(text);
                                                                 if(flgDEC==1){
                                                                     String ins=text;
                                                                     String estado="Correcto";

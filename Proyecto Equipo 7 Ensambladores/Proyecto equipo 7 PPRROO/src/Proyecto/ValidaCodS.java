@@ -13,15 +13,15 @@ public class ValidaCodS {
     public ValidaCodS() {
     }
 
-    public int validaCLI(String text) {
+    public int validaDAA(String text) {
         String ins = text.trim();
         String auxIns[] = ins.split(" ");
         String pal = auxIns[0];
         char aux;
         if (auxIns.length == 1) {
-            if (pal.charAt(0) == 'C' || pal.charAt(0) == 'c') {
-                if (pal.charAt(1) == 'L' || pal.charAt(1) == 'l') {
-                    if (pal.charAt(2) == 'I' || pal.charAt(2) == 'i') {
+            if (pal.charAt(0) == 'D' || pal.charAt(0) == 'd') {
+                if (pal.charAt(1) == 'A' || pal.charAt(1) == 'a') {
+                    if (pal.charAt(2) == 'A' || pal.charAt(2) == 'a') {
                         return 1;
                     } else {
                         return -1;
@@ -34,22 +34,24 @@ public class ValidaCodS {
         return 0;
     }
 
-    public int validaINTO(String text) {
+    public int validaPUSHF(String text) {
         String ins = text.trim();
         String auxIns[] = ins.split(" ");
         String pal = auxIns[0];
         char aux;
         if (auxIns.length == 1) {
-            if (pal.charAt(0) == 'I' || pal.charAt(0) == 'i') {
-                if (pal.charAt(1) == 'N' || pal.charAt(1) == 'n') {
-                    if (pal.charAt(2) == 'T' || pal.charAt(2) == 't') {
-                        if (pal.charAt(2) == 'O' || pal.charAt(2) == 'o') {
-                        return 1;
-                    } else {
-                        return -1;
+            if (pal.charAt(0) == 'P' || pal.charAt(0) == 'p') {
+                if (pal.charAt(1) == 'U' || pal.charAt(1) == 'u') {
+                    if (pal.charAt(2) == 'S' || pal.charAt(2) == 's') {
+                        if (pal.charAt(2) == 'H' || pal.charAt(2) == 'h') {
+                            if (pal.charAt(2) == 'F' || pal.charAt(2) == 'f') {
+                                return 1;
+                            } else {
+                                return -1;
+                            }
+                        }
                     }
                 }
-            }
             }
         } else {
             return -2;
@@ -57,8 +59,6 @@ public class ValidaCodS {
         return 0;
     }
 
-    
-    
     public int validaCLC(String text) {
         String ins = text.trim();
         String auxIns[] = ins.split(" ");
@@ -80,15 +80,15 @@ public class ValidaCodS {
         return 0;
     }
 
-    public int validaSTI(String text) {
+    public int validaCLD(String text) {
         String ins = text.trim();
         String auxIns[] = ins.split(" ");
         String pal = auxIns[0];
         char aux;
         if (auxIns.length == 1) {
-            if (pal.charAt(0) == 'S' || pal.charAt(0) == 's') {
-                if (pal.charAt(1) == 'T' || pal.charAt(1) == 't') {
-                    if (pal.charAt(2) == 'I' || pal.charAt(2) == 'i') {
+            if (pal.charAt(0) == 'C' || pal.charAt(0) == 'c') {
+                if (pal.charAt(1) == 'L' || pal.charAt(1) == 'l') {
+                    if (pal.charAt(2) == 'D' || pal.charAt(2) == 'd') {
                         return 1;
                     } else {
                         return -1;
@@ -101,15 +101,15 @@ public class ValidaCodS {
         return 0;
     }
 
-    public int validaAAM(String text) {
+    public int validaDEC(String text) {
         String ins = text.trim();
         String auxIns[] = ins.split(" ");
         String pal = auxIns[0];
         char aux;
         if (auxIns.length == 1) {
-            if (pal.charAt(0) == 'A' || pal.charAt(0) == 'a') {
-                if (pal.charAt(1) == 'A' || pal.charAt(1) == 'a') {
-                    if (pal.charAt(2) == 'M' || pal.charAt(2) == 'm') {
+            if (pal.charAt(0) == 'D' || pal.charAt(0) == 'd') {
+                if (pal.charAt(1) == 'E' || pal.charAt(1) == 'e') {
+                    if (pal.charAt(2) == 'C' || pal.charAt(2) == 'c') {
                         return 1;
                     } else {
                         return -1;
@@ -128,18 +128,14 @@ public class ValidaCodS {
         String pal = auxIns[0];
         char aux;
         if (auxIns.length == 1) {
-            if (pal.charAt(0) == 'C' || pal.charAt(0) == 'c') {
-                if (pal.charAt(1) == 'M' || pal.charAt(1) == 'm') {
-                    if (pal.charAt(2) == 'P' || pal.charAt(2) == 'p') {
-                        if (pal.charAt(3) == 'S' || pal.charAt(3) == 's') {
-                            if (pal.charAt(4) == 'W' || pal.charAt(4) == 'w') {
-                        }
+            if (pal.charAt(0) == 'R' || pal.charAt(0) == 'c') {
+                if (pal.charAt(1) == 'E' || pal.charAt(1) == 'm') {
+                    if (pal.charAt(2) == 'T' || pal.charAt(2) == 'p') {
                         return 1;
                     } else {
                         return -1;
                     }
-                }}
-                
+                }
             }
         } else {
             return -2;
@@ -168,16 +164,16 @@ public class ValidaCodS {
         return 0;
     }
 
-    public int validaSTOSW(String text) {
+    public int validaIMUL(String text) {
         String ins = text.trim();
         String auxIns[] = ins.split(" ");
         String pal = auxIns[0];
         char aux;
         if (auxIns.length == 1) {
-            if (pal.charAt(0) == 'I' || pal.charAt(0) == 'I') {
-                if (pal.charAt(1) == 'N' || pal.charAt(1) == 'N') {
-                    if (pal.charAt(2) == 'T' || pal.charAt(2) == 'T') {
-                        if (pal.charAt(3) == 'O' || pal.charAt(3) == 'O') {
+            if (pal.charAt(0) == 'I' || pal.charAt(0) == 'i') {
+                if (pal.charAt(1) == 'M' || pal.charAt(1) == 'm') {
+                    if (pal.charAt(2) == 'U' || pal.charAt(2) == 'u') {
+                        if (pal.charAt(3) == 'L' || pal.charAt(3) == 'l') {
                             return 1;
                         } else {
                             return -1;
@@ -192,23 +188,20 @@ public class ValidaCodS {
         return 0;
     }
 
-    public int validaLODSW(String text) {
+    public int validaPOP(String text) {
         String ins = text.trim();
         String auxIns[] = ins.split(" ");
         String pal = auxIns[0];
         char aux;
         if (auxIns.length == 1) {
-            if (pal.charAt(0) == 'L' || pal.charAt(0) == 'l') {
+            if (pal.charAt(0) == 'P' || pal.charAt(0) == 'p') {
                 if (pal.charAt(1) == 'O' || pal.charAt(1) == 'o') {
-                    if (pal.charAt(2) == 'D' || pal.charAt(2) == 'd') {
-                        if (pal.charAt(3) == 'S' || pal.charAt(3) == 's') {
-                            if (pal.charAt(4) == 'W' || pal.charAt(4) == 'w') {
-                                return 1;
-                            } else {
-                                return -1;
-                            }
-                        }
+                    if (pal.charAt(2) == 'P' || pal.charAt(2) == 'p') {
+                        return 1;
+                    } else {
+                        return -1;
                     }
+
                 }
             }
         } else {
@@ -298,7 +291,7 @@ public class ValidaCodS {
 
     }
 
-    public int validaDIV(String text) {
+    public int validaCMP(String text) {
         String ins = text.trim();
         String separadores = "[\\ \\,]";
         String auxIns[] = ins.split(separadores);
@@ -307,12 +300,12 @@ public class ValidaCodS {
             String pal = auxIns[0];
             String op1 = auxIns[1];
 
-            if (op1.equals("DIV")) {
+            if (op1.equals("CMP")) {
                 return -1;//orden incorrecto
             } else {
-                if (pal.charAt(0) == 'D' || pal.charAt(0) == 'd') {
-                    if (pal.charAt(1) == 'I' || pal.charAt(1) == 'i') {
-                        if (pal.charAt(2) == 'V' || pal.charAt(2) == 'v') {
+                if (pal.charAt(0) == 'C' || pal.charAt(0) == 'c') {
+                    if (pal.charAt(1) == 'M' || pal.charAt(1) == 'm') {
+                        if (pal.charAt(2) == 'P' || pal.charAt(2) == 'p') {
                             ValidaTam tamano = new ValidaTam();
 
                             return 1;
@@ -332,7 +325,7 @@ public class ValidaCodS {
 
     }
 
-    public int validaDEC(String text) {
+    public int validaLES(String text) {
         String ins = text.trim();
         String separadores = "[\\ \\,]";
         String auxIns[] = ins.split(separadores);
@@ -344,9 +337,9 @@ public class ValidaCodS {
             if (op1.equals("DEC")) {
                 return -1;//orden incorrecto
             } else {
-                if (pal.charAt(0) == 'D' || pal.charAt(0) == 'd') {
+                if (pal.charAt(0) == 'L' || pal.charAt(0) == 'l') {
                     if (pal.charAt(1) == 'E' || pal.charAt(1) == 'e') {
-                        if (pal.charAt(2) == 'C' || pal.charAt(2) == 'c') {
+                        if (pal.charAt(2) == 'S' || pal.charAt(2) == 's') {
                             ValidaTam tamano = new ValidaTam();
                             return 1;
                         }
@@ -364,7 +357,7 @@ public class ValidaCodS {
 
     }
 
-    public int validaMUL(String text) {
+    public int validaRCL(String text) {
         String ins = text.trim();
         String separadores = "[\\ \\,]";
         String auxIns[] = ins.split(separadores);
@@ -376,8 +369,8 @@ public class ValidaCodS {
             if (op1.equals("MUL")) {
                 return -1;//orden incorrecto
             } else {
-                if (pal.charAt(0) == 'M' || pal.charAt(0) == 'm') {
-                    if (pal.charAt(1) == 'U' || pal.charAt(1) == 'u') {
+                if (pal.charAt(0) == 'R' || pal.charAt(0) == 'r') {
+                    if (pal.charAt(1) == 'C' || pal.charAt(1) == 'c') {
                         if (pal.charAt(2) == 'L' || pal.charAt(2) == 'l') {
                             ValidaTam tamano = new ValidaTam();
                             return 1;
@@ -396,7 +389,7 @@ public class ValidaCodS {
 
     }
 
-    public int validaNEG(String text) {
+    public int validaJB(String text) {
         String ins = text.trim();
         String separadores = "[\\ \\,]";
         String auxIns[] = ins.split(separadores);
@@ -405,15 +398,13 @@ public class ValidaCodS {
             String pal = auxIns[0];
             String op1 = auxIns[1];
 
-            if (op1.equals("NEG")) {
+            if (op1.equals("JB")) {
                 return -1;//orden incorrecto
             } else {
-                if (pal.charAt(0) == 'N' || pal.charAt(0) == 'n') {
-                    if (pal.charAt(1) == 'E' || pal.charAt(1) == 'e') {
-                        if (pal.charAt(2) == 'G' || pal.charAt(2) == 'g') {
+                if (pal.charAt(0) == 'J' || pal.charAt(0) == 'j') {
+                    if (pal.charAt(1) == 'B' || pal.charAt(1) == 'b') {
                             ValidaTam tamano = new ValidaTam();
-                            return 1;
-                        }
+                            return 1;                   
                     }
                 }
             }
