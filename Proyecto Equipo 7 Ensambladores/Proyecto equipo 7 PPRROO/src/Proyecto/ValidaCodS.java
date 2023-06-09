@@ -7,7 +7,6 @@ package Proyecto;
 
 /**
  *
- * @author Karla Cuesta
  */
 public class ValidaCodS {
 

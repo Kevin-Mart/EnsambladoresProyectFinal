@@ -9,7 +9,7 @@ import javax.swing.JScrollBar;
 
 /**
  *
- * @author Luisa
+ 
  */
 public class pnlEstados extends javax.swing.JPanel {
     

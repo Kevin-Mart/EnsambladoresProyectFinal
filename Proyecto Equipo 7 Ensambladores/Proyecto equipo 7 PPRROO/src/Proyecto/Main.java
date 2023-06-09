@@ -44,6 +44,7 @@ public class Main extends javax.swing.JFrame {
 
         pnlControles = new javax.swing.JPanel();
         btnSeparar = new javax.swing.JButton();
+        btnSimbolos = new javax.swing.JButton();
         exit = new javax.swing.JButton();
         pnlAnalisis = new javax.swing.JPanel();
         pnlArchivo = new javax.swing.JPanel();
@@ -59,7 +60,7 @@ public class Main extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        pnlControles.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "Opciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 24))); // NOI18N
+        pnlControles.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Opciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 24))); // NOI18N
 
         btnSeparar.setBackground(new java.awt.Color(255, 153, 51));
         btnSeparar.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -67,6 +68,15 @@ public class Main extends javax.swing.JFrame {
         btnSeparar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSepararActionPerformed(evt);
+            }
+        });
+
+        btnSimbolos.setBackground(new java.awt.Color(255, 153, 51));
+        btnSimbolos.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnSimbolos.setText("Simbolos");
+        btnSimbolos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSimbolosActionPerformed(evt);
             }
         });
 
@@ -86,7 +96,10 @@ public class Main extends javax.swing.JFrame {
             .addGroup(pnlControlesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlControlesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSeparar, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
+                    .addComponent(btnSeparar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlControlesLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnSimbolos))
                     .addComponent(exit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -95,15 +108,17 @@ public class Main extends javax.swing.JFrame {
             .addGroup(pnlControlesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnSeparar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnSimbolos, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(exit)
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        pnlAnalisis.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "Resultados", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Times New Roman", 1, 24))); // NOI18N
+        pnlAnalisis.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Resultados", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Times New Roman", 1, 24))); // NOI18N
         pnlAnalisis.setLayout(new java.awt.BorderLayout());
 
-        pnlArchivo.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "Archivo ASM", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 24))); // NOI18N
+        pnlArchivo.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Archivo ASM", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 24))); // NOI18N
 
         btnAtrasArchivo.setBackground(new java.awt.Color(255, 255, 153));
         btnAtrasArchivo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/atras.png"))); // NOI18N
@@ -169,7 +184,7 @@ public class Main extends javax.swing.JFrame {
         mnArchivo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         mnArchivo.setText("Archivo");
 
-        smnCargarArchivo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        smnCargarArchivo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
         smnCargarArchivo.setText("Seleccione archivo");
         smnCargarArchivo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -286,6 +301,17 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
          System.exit(0);
     }//GEN-LAST:event_exitActionPerformed
+
+    private void btnSimbolosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimbolosActionPerformed
+        // TODO add your handling code here:
+        if (seAbrioCorrecto) {
+            pnlAnalisis.setBorder(javax.swing.BorderFactory.createTitledBorder("Tabla de Simbolos"));
+            pnlAnalisis.removeAll();
+            pnlAnalisis.add(pnlsimbolos);
+            pnlAnalisis.validate();
+            pnlAnalisis.repaint();
+        }
+    }//GEN-LAST:event_btnSimbolosActionPerformed
     public void construirArchivo() throws FileNotFoundException{
         int cont=1;
         paginasA=1;
@@ -509,6 +535,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnAtrasArchivo;
     private javax.swing.JButton btnSeparar;
     private javax.swing.JButton btnSiguienteArchivo;
+    private javax.swing.JButton btnSimbolos;
     private javax.swing.JButton exit;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;

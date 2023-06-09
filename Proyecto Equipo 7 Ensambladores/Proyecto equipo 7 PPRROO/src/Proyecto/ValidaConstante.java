@@ -4,7 +4,7 @@ package Proyecto;
 
 /**
  *
- * @author 
+ 
  */
 public class ValidaConstante {
     

@@ -52,46 +52,46 @@ public class pnlSeparar extends javax.swing.JPanel {
     String pr[] = new String[40];
     
     public void palabrasReservadas() {
-        pr[0] = "CLC";
-        pr[1] = "CMPSW";
-        pr[2] = "INTO";
-        pr[3] = "STI";
-        pr[4] = "AAM";
-        pr[5] = "CLI";
+        pr[0] = "DAA";
+        pr[1] = "DAS";
+        pr[2] = "PUSHF";
+        pr[3] = "RET";
+        pr[4] = "CLC";
+        pr[5] = "CLD";
         pr[6] = "DEC";
-        pr[7] = "DIV";
-        pr[8] = "MUL";
-        pr[9] = "IDIV";
-        pr[10] = "LDS";
-        pr[11] = "MOV";
-        pr[12] = "SAR";
-        pr[13] = "ROR";
-        pr[14] = "JNS";
-        pr[15] = "JS";
-        pr[16] = "JGE";
-        pr[17] = "JNA";
-        pr[18] = "LOOPNE";
-        pr[19] = "JAE";
-        pr[20] = "clc";
-        pr[21] = "cmpsw";
-        pr[22] = "into";
-        pr[23] = "sti";
-        pr[24] = "aam";
-        pr[25] = "cli";
+        pr[7] = "IDIV";
+        pr[8] = "IMUL";
+        pr[9] = "POP";
+        pr[10] = "CMP";
+        pr[11] = "LES";
+        pr[12] = "RCL";
+        pr[13] = "XCHG";
+        pr[14] = "JB";
+        pr[15] = "JE";
+        pr[16] = "JLE";
+        pr[17] = "JNL";
+        pr[18] = "JNS";
+        pr[19] = "JS";
+        pr[20] = "daa";
+        pr[21] = "das";
+        pr[22] = "pushf";
+        pr[23] = "ret";
+        pr[24] = "clc";
+        pr[25] = "cld";
         pr[26] = "dec";
-        pr[27] = "div";
-        pr[28] = "mul";
-        pr[29] = "idiv";
-        pr[30] = "lds";
-        pr[31] = "mov";
-        pr[32] = "sar";
-        pr[33] = "ror";
-        pr[34] = "jns";
-        pr[35] = "js";
-        pr[36] = "jge";
-        pr[37] = "jna";
-        pr[38] = "loopne";
-        pr[39] = "jae";
+        pr[27] = "idiv";
+        pr[28] = "imul";
+        pr[29] = "pop";
+        pr[30] = "cmp";
+        pr[31] = "les";
+        pr[32] = "rcl";
+        pr[33] = "xchg";
+        pr[34] = "jb";
+        pr[35] = "je";
+        pr[36] = "jle";
+        pr[37] = "jnl";
+        pr[38] = "jns";
+        pr[39] = "js";
     }
 
     public void separarElementos() {
@@ -774,7 +774,7 @@ public class pnlSeparar extends javax.swing.JPanel {
                                        return("Error Hexadecimal");
                                                                       
                                 }
-                             
+                                
                               }else{                           
                                    return ("Simbolo");    
                               }                                                                                          
@@ -902,7 +902,10 @@ public class pnlSeparar extends javax.swing.JPanel {
         return ("\n\nError");
     }
     public String es_Instruccion_Especial(String simbolo){
-        if (simbolo.equals("ends")||simbolo.equals("ENDS")) {
+        if (simbolo.equals(".data segment")) {
+            return "PseudoInstruccion";
+        }
+        else if (simbolo.equals("ends")||simbolo.equals("ENDS")) {
             return "PseudoInstruccion";
         }else if (simbolo.equals("db")||simbolo.equals("DB")) {
             return "PseudoInstruccion";

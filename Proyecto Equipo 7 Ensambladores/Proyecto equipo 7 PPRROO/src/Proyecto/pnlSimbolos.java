@@ -16,7 +16,7 @@ import javax.swing.table.TableColumnModel;
 
 /**
  *
- * @author luisa
+ * 
  */
 public class pnlSimbolos extends javax.swing.JPanel {
 
@@ -486,13 +486,13 @@ DefaultTableModel mc;
                         }/*if auxD*/
                     }/*if code*/else{
                         if(auxCs==1){
-                            if(text.contains("CLI")|| text.contains("cli")){
+                            if(text.contains("DAA")|| text.contains("daa")){
                                 int flgCLI=code.validaCLI(text);
                                 if(flgCLI==1){
                                     String ins=text;
                                     String estado="Correcto";
                                     String CP=dir.direccion(contadorCS);
-                                    String tabEst[]={CP+"h",ins,estado,"    FA"};
+                                    String tabEst[]={CP+"h",ins,estado,"    27"};
                                     mc.addRow(tabEst);
                                     contadorCS=contadorCS+1;
                                 }//if flg 1
@@ -512,13 +512,13 @@ DefaultTableModel mc;
                                 }
                             }else{
                         if(auxCs==1){
-                            if(text.contains("CLC")|| text.contains("clc")){
+                            if(text.contains("DAS")|| text.contains("das")){
                                 int flgCLC=code.validaCLC(text);
                                 if(flgCLC==1){
                                     String ins=text;
                                     String estado="Correcto";
                                     String CP=dir.direccion(contadorCS);
-                                    String tabEst[]={CP+"h",ins,estado,"    F8"};
+                                    String tabEst[]={CP+"h",ins,estado,"    2F"};
                                     mc.addRow(tabEst);
                                     contadorCS=contadorCS+1;
                                 }//if flg 1
@@ -543,13 +543,13 @@ DefaultTableModel mc;
                             
                             
                             /*if pushf*/else{
-                                if(text.contains("AAM")|| text.contains("aam")){
+                                if(text.contains("PUSHF")|| text.contains("pushf")){
                                     int flgAAM=code.validaAAM(text);
                                     if(flgAAM==1){
                                         String ins=text;
                                         String estado="Correcto";
                                         String CP=dir.direccion(contadorCS);
-                                        String tabEst[]={CP+"h",ins,estado,"    D40A"};
+                                        String tabEst[]={CP+"h",ins,estado,"    9C"};
                                         mc.addRow(tabEst);
                                         contadorCS=contadorCS+2;
                                     }//if flg 1
@@ -568,13 +568,13 @@ DefaultTableModel mc;
                                         mc.addRow(tabEst);
                                     }
                                 }/*if aas*/else{
-                                    if(text.contains("CMPSW")|| text.contains("cmpsw")){
+                                    if(text.contains("RET")|| text.contains("ret")){
                                         int flgRET=code.validaRET(text);
                                         if(flgRET==1){
                                             String ins=text;
                                             String estado="Correcto";
                                             String CP=dir.direccion(contadorCS);
-                                            String tabEst[]={CP+"h",ins,estado,"   A7"};
+                                            String tabEst[]={CP+"h",ins,estado,"   C3"};
                                             mc.addRow(tabEst);
                                             contadorCS=contadorCS+1;
                                         }//if flg 1
@@ -593,13 +593,13 @@ DefaultTableModel mc;
                                             mc.addRow(tabEst);
                                         }
                                     }/*if cmpsw*/else{
-                                        if(text.contains("INTO")|| text.contains("into")){
+                                        if(text.contains("CLC")|| text.contains("clc")){
                                             int flgSTOSW=code.validaSTOSW(text);
                                             if(flgSTOSW==1){
                                                 String ins=text;
                                                 String estado="Correcto";
                                                 String CP=dir.direccion(contadorCS);
-                                                String tabEst[]={CP+"h",ins,estado,"    CE"};
+                                                String tabEst[]={CP+"h",ins,estado,"    F8"};
                                                 mc.addRow(tabEst);
                                                 contadorCS=contadorCS+1;
                                             }//if flg 1
@@ -618,13 +618,13 @@ DefaultTableModel mc;
                                                 mc.addRow(tabEst);
                                             }
                                         }/*if nop*/else{  
-                                        if(text.contains("STI")||text.contains("sti")){
+                                        if(text.contains("CLD")||text.contains("cld")){
                                            int flgDAS=code.validaSTI(text);
                                             if(flgDAS==1){
                                                 String ins=text;
                                                 String estado="Correcto";
                                                 String CP=dir.direccion(contadorCS);
-                                                String tabEst[]={CP+"h",ins,estado,"    00FB"};
+                                                String tabEst[]={CP+"h",ins,estado,"    FC"};
                                                 mc.addRow(tabEst);
                                                 //int sum = codDEC.length()/2;
                                                 contadorCS=contadorCS+2;
@@ -644,13 +644,13 @@ DefaultTableModel mc;
                                                 mc.addRow(tabEst);
                                             }//if flg 2    
                                            }/*if imul*/ else{
-                                                if(text.contains("LODSW")|| text.contains("lodsw")){
+                                                if(text.contains("DEC")|| text.contains("dec")){
                                             int flgLODSW=code.validaLODSW(text);
                                             if(flgLODSW==1){
                                                 String ins=text;
                                                 String estado="Correcto";
                                                 String CP=dir.direccion(contadorCS);
-                                                String tabEst[]={CP+"h",ins,estado,"    00AD"};
+                                                String tabEst[]={CP+"h",ins,estado,"    4B"};
                                                 mc.addRow(tabEst);
                                                 contadorCS=contadorCS+2;
                                             }//if flg 1
@@ -669,14 +669,14 @@ DefaultTableModel mc;
                                                 mc.addRow(tabEst);
                                             }
                                         }/*if nop*/else{
-                                                if(text.contains("NEG")||text.contains("neg")){
+                                                if(text.contains("IDIV")||text.contains("idiv")){
                                                                 int flgNEG=code.validaNEG(text);
                                                                 if(flgNEG==1){
                                                                     String ins=text;
                                                                     String estado="Correcto";
                                                                     String CP=dir.direccion(contadorCS);
                                                                     String codDEC=codigo.codNEG(ins);
-                                                                    String tabEst[]={CP+"h",ins,estado,"    "+codDEC};
+                                                                    String tabEst[]={CP+"h",ins,estado," F7F8"+codDEC};
                                                                     mc.addRow(tabEst);
                                                                     //int sum = codDEC.length()/2;
                                                                     contadorCS=contadorCS+2;
@@ -697,14 +697,14 @@ DefaultTableModel mc;
                                                                 }//if flg 2                                                          
 
                                                            }/*if NEG*/ else{
-                                                   if(text.contains("NOT ")||text.contains("not ")){
+                                                   if(text.contains("IMUL")||text.contains("imul")){
                                                    int flgNOT=code.validaNOT(text);
                                                    if(flgNOT==1){
                                                        String ins=text;
                                                        String estado="Correcto";
                                                        String CP=dir.direccion(contadorCS);
                                                        String codR=codigo.codNOT(ins);
-                                                       String tabEst[]={CP+"h",ins,estado,"    "+codR};
+                                                       String tabEst[]={CP+"h",ins,estado,"0FAFC1"+codR};
                                                        mc.addRow(tabEst);
                                                        int sum = codR.length()/2;
                                                        contadorCS=contadorCS+sum;
@@ -724,14 +724,14 @@ DefaultTableModel mc;
                                                        mc.addRow(tabEst);
                                                    }
                                                    }/*if NOT*/ else{
-                                                   if(text.contains("AND ")||text.contains("and ")){
+                                                   if(text.contains("POP")||text.contains("pop")){
                                                    int flgAND=code.validaAND(text);
                                                    if(flgAND==1){
                                                        String ins=text;
                                                        String estado="Correcto";
                                                        String CP=dir.direccion(contadorCS);
                                                        String codADC=codigo.codAND(ins);
-                                                       String tabEst[]={CP+"h",ins,estado,"    "+codADC};
+                                                       String tabEst[]={CP+"h",ins,estado,"58"+codADC};
                                                        mc.addRow(tabEst);
                                                        int sum = codADC.length()/2;
                                                        contadorCS=contadorCS+sum;
@@ -788,14 +788,14 @@ DefaultTableModel mc;
                                                        }            
                                                    }//if flg 6
                                                }/*if shl*/ else{   
-                                                   if(text.contains("INTO ")||text.contains("INTO ")){
+                                                   if(text.contains("CMP ")||text.contains("cmp ")){
                                                    int flgTEST=code.validaINTO(text);
                                                    if(flgTEST==1){
                                                        String ins=text;
                                                        String estado="Correcto";
                                                        String CP=dir.direccion(contadorCS);
                                                        String codR=codigo.codTEST(ins);
-                                                       String tabEst[]={CP+"h",ins,estado,"    "+codR};
+                                                       String tabEst[]={CP+"h",ins,estado,"3BXXYY"+codR};
                                                        mc.addRow(tabEst);
                                                        int sum = codR.length()/2;
                                                        contadorCS=contadorCS+sum;
@@ -852,14 +852,14 @@ DefaultTableModel mc;
                                                        }            
                                                    }//if flg 6
                                                }/*if shl*/ else{
-                                                   if(text.contains("ROR")||text.contains("ror")){
+                                                   if(text.contains("LES")||text.contains("les")){
                                                    int flgROR=code.validaROR(text);
                                                    if(flgROR==1){
                                                        String ins=text;
                                                        String estado="Correcto";
                                                        String CP=dir.direccion(contadorCS);
                                                        String codR=codigo.codROR(ins);
-                                                       String tabEst[]={CP+"h",ins,estado,"    "+codR};
+                                                       String tabEst[]={CP+"h",ins,estado,"C4XX"+codR};
                                                        mc.addRow(tabEst);
                                                        int sum = codR.length()/2;
                                                        contadorCS=contadorCS+sum;
@@ -941,7 +941,7 @@ DefaultTableModel mc;
                                                            }
                                                        }/*if flg etiq*/
                                                    }/*if etiq*/else{
-                                                       if(text.contains("JNS ")||text.contains("JS ")||text.contains("JGE ")||text.contains("JNA")||text.contains("LOOPNE")||text.contains("JAE")||text.contains("jns")||text.contains("js")||text.contains("jge")||text.contains("jna")||text.contains("loopne")||text.contains("jae")){
+                                                       if(text.contains("JNL")||text.contains("79XX")||text.contains("JS ")||text.contains("JNA")||text.contains("LOOPNE")||text.contains("JAE")||text.contains("jns")||text.contains("js")||text.contains("jge")||text.contains("jna")||text.contains("loopne")||text.contains("jae")){
                                                            int flgJump=code.validaSaltos(text);
                                                            if(flgJump==1){
                                                                String inS=text.trim();
@@ -956,7 +956,7 @@ DefaultTableModel mc;
                                                                    int dirPos=buscaPos(sim);
                                                                    String dirEt=direcEt(dirPos);
                                                                    String cod=codigo.codSaltos(jmp);
-                                                                   String tabEst[]={CP+"h",ins,estado,"    "+cod+dirEt};
+                                                                   String tabEst[]={CP+"h",ins,estado,"7dxx"+cod+dirEt};
                                                                    mc.addRow(tabEst);
                                                                    contadorCS=contadorCS+2;
                                                                }else{
@@ -982,14 +982,14 @@ DefaultTableModel mc;
                                                                mc.addRow(tabEst);
                                                            }//if flg 2
                                                        }/*if saltos*/else{
-                                                           if(text.contains("DIV")||text.contains("div")){
+                                                           if(text.contains("RCL")||text.contains("rcl")){
                                                                int flgDIV=code.validaDIV(text);
                                                                 if(flgDIV==1){
                                                                     String ins=text;
                                                                     String estado="Correcto";
                                                                     String CP=dir.direccion(contadorCS);
                                                                     String codDIV=codigo.codDIV(ins);
-                                                                    String tabEst[]={CP+"h",ins,estado,"    "+codDIV};
+                                                                    String tabEst[]={CP+"h",ins,estado,"D0D2"+codDIV};
                                                                     mc.addRow(tabEst);
                                                                     //int sum = codDEC.length()/2;
                                                                     contadorCS=contadorCS+2;
@@ -1010,14 +1010,14 @@ DefaultTableModel mc;
                                                                 }//if flg 2                                                          
 
                                                                 }
-                                                           if(text.contains("DEC")||text.contains("DEC")){
+                                                           if(text.contains("XCHG")||text.contains("xchg")){
                                                                int flgDEC=code.validaDEC(text);
                                                                 if(flgDEC==1){
                                                                     String ins=text;
                                                                     String estado="Correcto";
                                                                     String CP=dir.direccion(contadorCS);
                                                                     String codDEC=codigo.codDEC(ins);
-                                                                    String tabEst[]={CP+"h",ins,estado,"    "+codDEC};
+                                                                    String tabEst[]={CP+"h",ins,estado,"86XX"+codDEC};
                                                                     mc.addRow(tabEst);
                                                                     //int sum = codDEC.length()/2;
                                                                     contadorCS=contadorCS+2;
@@ -1039,14 +1039,14 @@ DefaultTableModel mc;
 
                                                                 }
                                                            else{
-                                                           if(text.contains("IDIV")||text.contains("idiv")){
+                                                           if(text.contains("JB")||text.contains("jb")){
                                                                int flgIDIV=code.validaIDIV(text);
                                                                 if(flgIDIV==1){
                                                                     String ins=text;
                                                                     String estado="Correcto";
                                                                     String CP=dir.direccion(contadorCS);
                                                                     String codIDIV=codigo.codIDIV(ins);
-                                                                    String tabEst[]={CP+"h",ins,estado,"    "+codIDIV};
+                                                                    String tabEst[]={CP+"h",ins,estado,"72XX"+codIDIV};
                                                                     mc.addRow(tabEst);
                                                                     //int sum = codDEC.length()/2;
                                                                     contadorCS=contadorCS+2;
@@ -1076,14 +1076,14 @@ DefaultTableModel mc;
                                                            
                                                            /*if idiv*/ else{
                                                                
-                                                                if(text.contains("MUL")||text.contains("mul")){
+                                                                if(text.contains("JE")||text.contains("je")){
                                                                 int flgDEC=code.validaMUL(text);
                                                                 if(flgDEC==1){
                                                                     String ins=text;
                                                                     String estado="Correcto";
                                                                     String CP=dir.direccion(contadorCS);
                                                                     String codDEC=codigo.codDEC(ins);
-                                                                    String tabEst[]={CP+"h",ins,estado,"    F7E3"};
+                                                                    String tabEst[]={CP+"h",ins,estado,"74XX"};
                                                                     mc.addRow(tabEst);
                                                                     //int sum = codDEC.length()/2;
                                                                     contadorCS=contadorCS+2;
@@ -1109,13 +1109,13 @@ DefaultTableModel mc;
                                                            }/*if idiv*/
                                                                 
                                                                 else{
-                                                               if(text.contains("ends")||text.contains("ENDS")){
+                                                               if(text.contains("JLE")||text.contains("JLE")){
                                                                   if(auxCs==1|| auxEnd==0){
                                                                        auxEnd= auxEnd+1;
                                                                        String ins=text;
                                                                        String estado= "Correcto";
                                                                        String CP=dir.direccion(contadorCS);
-                                                                       String tabEst[]={CP+"h",ins,estado};
+                                                                       String tabEst[]={CP+"h",ins,estado,"7EXX"};
                                                                        mc.addRow(tabEst);
                                                                        break;
                                                                        }/*if aux*/else{

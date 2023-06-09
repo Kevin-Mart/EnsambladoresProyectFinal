@@ -10,7 +10,6 @@ package Proyecto;
 
 /**
  *
- * @author Luisa
  * 
  */
 public class ValidaStack {

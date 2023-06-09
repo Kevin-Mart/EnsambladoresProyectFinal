@@ -1,4 +1,3 @@
-
 .data segment				 
 datasegment
 data segment				 
@@ -105,8 +104,82 @@ ends
 
 .stack segment				 
  dw   128  dup(0)			 
- dw   128  dupy(0)		 
+ dw   128  dupy(0)	
+ 
+section .text
+    global _start
+
+_start:
+
+mov al, 0x49     
+DAA             
+    
+mov al, 0x32     
+DAS             
+pushf 
+
+ret           
+
+clc 
+
+cld 
+
+mov eax, 10 
+dec eax
+
+mov eax, 20     
+mov ebx, 4      
+idiv ebx        
+
+mov eax, 5      
+imul ebx, 4     
+
+pop ecx         
+
+mov eax, 10   
+cmp eax, 5      
+
+les eax, [ebx] 
+
+
+mov eax, 0xFF   
+rcl eax, 1      
+
+mov eax, 10     
+mov ebx, 20     
+xchg eax, ebx
+
+mov eax, 5
+mov ebx, 10
+cmp eax, ebx
+jb etiqueta  
+
+mov eax, 5
+cmp eax, 5
+je etiqueta   
+
+    mov eax, 5
+    cmp eax, 10
+    jle etiqueta   
+
+    cmp eax, 5
+    jnl etiqueta    
+
+    mov eax, 5
+    cmp eax, 0
+    jns etiqueta   
+
+
+    mov eax, -5
+    cmp eax, 0
+    js etiqueta 
+
+etiqueta:
+    ; C�digo adicional aqu�...
+
+section .data
+    ; Datos aqu�...
+
+section .bss
+    ; Variables no inicializadas aqu�... 
 ends
-
-
-
